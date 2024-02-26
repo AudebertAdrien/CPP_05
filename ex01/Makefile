@@ -6,7 +6,7 @@
 #    By: motoko <marvin@42.fr>                      +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/01/02 14:26:47 by motoko            #+#    #+#              #
-#    Updated: 2024/02/21 13:09:05 by motoko           ###   ########.fr        #
+#    Updated: 2024/02/21 14:10:56 by motoko           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -18,7 +18,8 @@ INCLUDES_DIR	:= includes
 VPATH			:= $(SRCS_DIR):
 
 SRCS			:= main.cpp				\
-				   Bureaucrat.cpp
+				   Bureaucrat.cpp		\
+				   Form.cpp
 
 CC				:= c++
 CFLAGS			:= -ggdb3 -Wall -Wextra 
