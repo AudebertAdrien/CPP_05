@@ -6,7 +6,7 @@
 /*   By: motoko <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/26 15:25:51 by motoko            #+#    #+#             */
-/*   Updated: 2024/02/27 15:30:16 by motoko           ###   ########.fr       */
+/*   Updated: 2024/02/29 12:39:02 by motoko           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,10 +35,20 @@ Shrubbery::~Shrubbery() {
 	std::cout << "Shrubbery destructor called" << std::endl;
 }
 
-void	Shrubbery::execute(Bureaucrat const &bc) {
-	std::cout << "Shrubbery beSigned called" << std::endl;
+void	asciiTree(std::ofstream &ofs) {
+    ofs << "    ^    " << std::endl;
+    ofs << "   / \\   " << std::endl;
+    ofs << "  /   \\  " << std::endl;
+    ofs << " /     \\ " << std::endl;
+    ofs << "/_______\\" << std::endl;
+    ofs << "   |||   " << std::endl;
+}
 
-	AForm::GradeTooLowException errMsg;
+void	Shrubbery::execute(Bureaucrat const &bc) {
+	std::cout << "Shrubbery execute called" << std::endl;
+
+	Shrubbery::GradeTooLowException errMsg;
+
 	if (bc.getGrade() < this->getGradeToExecute())
 	{
 		std::string outputFilename = std::string(bc.getName()) + "_shrubbery";
@@ -48,10 +58,10 @@ void	Shrubbery::execute(Bureaucrat const &bc) {
 			std::cerr << "Error: unable to open file" << std::endl;
 			return ;
 		}
-		ofs << "test";
+		asciiTree(ofs);
 		ofs.close();
 	}
-	else
+	else 
 		throw errMsg; 
 
 }

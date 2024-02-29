@@ -6,7 +6,7 @@
 /*   By: motoko <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/20 14:51:54 by motoko            #+#    #+#             */
-/*   Updated: 2024/02/27 14:00:25 by motoko           ###   ########.fr       */
+/*   Updated: 2024/02/27 16:11:34 by motoko           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,6 +34,7 @@ class	Bureaucrat {
 		~Bureaucrat();	
 
 		void		signForm(AForm &form);
+		void		executeForm(AForm *form);
 
 		void		incrementGrade();
 		void		decrementGrade();

@@ -6,7 +6,7 @@
 /*   By: motoko <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/20 14:51:33 by motoko            #+#    #+#             */
-/*   Updated: 2024/02/27 13:59:19 by motoko           ###   ########.fr       */
+/*   Updated: 2024/02/29 12:52:58 by motoko           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,11 +37,24 @@ Bureaucrat::~Bureaucrat() {
 }
 
 void	Bureaucrat::signForm(AForm &form) {
+	std::cout << "Bureaucrate signForm beSigned called" << std::endl;
+
 	try {
 		form.beSigned(*this);
 		std::cout << YELLOW << this->_name << " signed " << form.getName() << RESET << std::endl;
 	} catch (std::exception &e) {
 		std::cout << YELLOW << this->_name << " couldn’t sign " << form.getName() << " because " << e.what() << RESET << std::endl;
+	}
+}
+
+void	Bureaucrat::executeForm(AForm *form) {
+	std::cout << "Bureaucrate executeForm beSigned called" << std::endl;
+
+	try {
+		form->execute(*this);
+		std::cout << YELLOW << this->_name << " execute " << form->getName() << RESET << std::endl;
+	} catch (std::exception &e) {
+		std::cout << YELLOW << this->_name << " couldn’t execute " << form->getName() << " because " << e.what() << RESET << std::endl;
 	}
 }
 

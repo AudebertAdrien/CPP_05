@@ -6,7 +6,7 @@
 /*   By: motoko <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/20 14:51:54 by motoko            #+#    #+#             */
-/*   Updated: 2024/02/27 15:20:52 by motoko           ###   ########.fr       */
+/*   Updated: 2024/02/29 12:43:57 by motoko           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,7 +34,8 @@ class	AForm {
 		AForm& operator=(AForm const &src);
 		~AForm();	
 
-		void	beSigned(Bureaucrat const &bc);
+		void			beSigned(Bureaucrat const &bc);
+		virtual void	execute(Bureaucrat const &bc) = 0;
 
 		/* == setter == */
 		void	setGradeToSign();
@@ -50,7 +51,7 @@ class	AForm {
 		class GradeTooLowException : public std::exception {
 			public:
 				virtual const char* what() const throw() {
-					return ("<AForm.hpp> Grade too low");
+					return ("Grade too low");
 				}
 		};
 

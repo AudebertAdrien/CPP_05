@@ -6,7 +6,7 @@
 #    By: motoko <marvin@42.fr>                      +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/01/02 14:26:47 by motoko            #+#    #+#              #
-#    Updated: 2024/02/26 15:26:53 by motoko           ###   ########.fr        #
+#    Updated: 2024/02/29 12:58:33 by motoko           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -52,6 +52,7 @@ clean:
 
 fclean: clean
 	$(RM) $(NAME)
+	$(RM) *_shrubbery
 
 re: fclean all
 

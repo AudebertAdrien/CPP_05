@@ -6,7 +6,7 @@
 /*   By: motoko <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/26 15:27:10 by motoko            #+#    #+#             */
-/*   Updated: 2024/02/27 15:13:01 by motoko           ###   ########.fr       */
+/*   Updated: 2024/02/29 12:47:47 by motoko           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,6 +15,7 @@
 
 #include <iostream>
 #include <fstream>
+#include <stdexcept>
 
 #include "AForm.hpp"
 
@@ -27,6 +28,13 @@ class Shrubbery : public AForm {
 		~Shrubbery();	
 
 		void	execute(Bureaucrat const &bc);
+
+		class GradeTooLowException : public std::exception {
+			public:
+				virtual const char* what() const throw() {
+					return ("Grade too low");
+				}
+		};
 };
 
 #endif
