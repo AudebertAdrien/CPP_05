@@ -6,7 +6,7 @@
 /*   By: motoko <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/20 14:51:33 by motoko            #+#    #+#             */
-/*   Updated: 2024/02/29 14:17:59 by motoko           ###   ########.fr       */
+/*   Updated: 2024/02/29 14:36:38 by motoko           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -47,7 +47,7 @@ void	Bureaucrat::signForm(AForm &form) {
 	}
 }
 
-void	Bureaucrat::executeForm(AForm *form) {
+void	Bureaucrat::executeForm(AForm *form) const {
 	std::cout << "Bureaucrate executeForm beSigned called" << std::endl;
 
 	try {
