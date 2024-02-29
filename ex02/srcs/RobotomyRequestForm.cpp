@@ -6,7 +6,7 @@
 /*   By: motoko <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/29 13:00:06 by motoko            #+#    #+#             */
-/*   Updated: 2024/02/29 13:09:21 by motoko           ###   ########.fr       */
+/*   Updated: 2024/02/29 13:54:42 by motoko           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,7 +23,15 @@ void	RobotomyRequestForm::execute(Bureaucrat const &bc) {
 
 	if (bc.getGrade() < this->getGradeToExecute())
 	{
-		std::cout << "test called" << std::endl;
+		int	randNumber;
+
+		std::srand(time(NULL));
+		randNumber = std::rand() % 100 + 1;
+		//std::cout << "randNumber === " << randNumber << std::endl;
+		if (randNumber <= 50 )
+			std::cout << YELLOW << bc.getName() << " has been robotomized!" << RESET << std::endl;
+		else
+			std::cout << MAGENTA << "Fail to robotomized!" << bc.getName() << RESET << std::endl;
 	}
 	else 
 		throw errMsg; 

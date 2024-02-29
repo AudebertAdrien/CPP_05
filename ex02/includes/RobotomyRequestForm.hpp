@@ -6,7 +6,7 @@
 /*   By: motoko <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/29 12:59:41 by motoko            #+#    #+#             */
-/*   Updated: 2024/02/29 13:13:32 by motoko           ###   ########.fr       */
+/*   Updated: 2024/02/29 13:53:08 by motoko           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,8 @@
 # define ROBOTOMYREQUEST_HPP
 
 #include <iostream>
+#include <cstdlib>
+//#include <time.h>
 
 #include "AForm.hpp"
 
