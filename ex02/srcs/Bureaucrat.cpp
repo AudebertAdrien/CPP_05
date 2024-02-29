@@ -6,7 +6,7 @@
 /*   By: motoko <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/20 14:51:33 by motoko            #+#    #+#             */
-/*   Updated: 2024/02/29 12:52:58 by motoko           ###   ########.fr       */
+/*   Updated: 2024/02/29 13:18:11 by motoko           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -43,7 +43,7 @@ void	Bureaucrat::signForm(AForm &form) {
 		form.beSigned(*this);
 		std::cout << YELLOW << this->_name << " signed " << form.getName() << RESET << std::endl;
 	} catch (std::exception &e) {
-		std::cout << YELLOW << this->_name << " couldn’t sign " << form.getName() << " because " << e.what() << RESET << std::endl;
+		std::cout << RED << this->_name << " couldn’t sign " << form.getName() << " because " << e.what() << RESET << std::endl;
 	}
 }
 
@@ -54,7 +54,7 @@ void	Bureaucrat::executeForm(AForm *form) {
 		form->execute(*this);
 		std::cout << YELLOW << this->_name << " execute " << form->getName() << RESET << std::endl;
 	} catch (std::exception &e) {
-		std::cout << YELLOW << this->_name << " couldn’t execute " << form->getName() << " because " << e.what() << RESET << std::endl;
+		std::cout << RED << this->_name << " couldn’t execute " << form->getName() << " because " << e.what() << RESET << std::endl;
 	}
 }
 
@@ -81,7 +81,7 @@ void Bureaucrat::decrementGrade() {
 
 /* == display == */
 std::ostream & operator<<(std::ostream & o, Bureaucrat & rhs) {
-	o << MAGENTA << rhs.getName() << ", bureaucrat grade " << rhs.getGrade() << RESET;
+	o << GREEN << rhs.getName() << ", bureaucrat grade " << rhs.getGrade() << RESET;
 	return (o);
 }
 

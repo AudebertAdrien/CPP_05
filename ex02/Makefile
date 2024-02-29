@@ -6,7 +6,7 @@
 #    By: motoko <marvin@42.fr>                      +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/01/02 14:26:47 by motoko            #+#    #+#              #
-#    Updated: 2024/02/29 12:58:33 by motoko           ###   ########.fr        #
+#    Updated: 2024/02/29 13:14:23 by motoko           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -20,7 +20,8 @@ VPATH			:= $(SRCS_DIR):
 SRCS			:= main.cpp						\
 				   Bureaucrat.cpp				\
 				   AForm.cpp					\
-				   ShrubberyCreationForm.cpp	
+				   ShrubberyCreationForm.cpp	\
+				   RobotomyRequestForm.cpp
 
 CC				:= c++
 CFLAGS			:= -ggdb3 -Wall -Wextra 

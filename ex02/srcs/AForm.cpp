@@ -6,15 +6,11 @@
 /*   By: motoko <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/21 14:06:50 by motoko            #+#    #+#             */
-/*   Updated: 2024/02/29 12:35:43 by motoko           ###   ########.fr       */
+/*   Updated: 2024/02/29 13:07:23 by motoko           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "AForm.hpp"
-
-AForm::AForm() {
-	std::cout << "AForm default constructor called" << std::endl;
-}
 
 AForm::AForm(std::string name, int gradeToSign, int gradeToExecute) : _name(name), _gradeToSign(gradeToSign), _gradeToExecute(gradeToExecute) {
 	std::cout << "AForm constructor with params called" << std::endl;

@@ -1,30 +1,25 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ShrubberyCreationForm.hpp                          :+:      :+:    :+:   */
+/*   RobotomyRequestForm.hpp                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: motoko <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/02/26 15:27:10 by motoko            #+#    #+#             */
-/*   Updated: 2024/02/29 13:07:27 by motoko           ###   ########.fr       */
+/*   Created: 2024/02/29 12:59:41 by motoko            #+#    #+#             */
+/*   Updated: 2024/02/29 13:13:32 by motoko           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef SHRUBBERY_HPP
-# define SHRUBBERY_HPP
+#ifndef ROBOTOMYREQUEST_HPP
+# define ROBOTOMYREQUEST_HPP
 
 #include <iostream>
-#include <fstream>
-#include <stdexcept>
 
 #include "AForm.hpp"
 
-class Shrubbery : public AForm {
+class RobotomyRequestForm : public AForm {
 	public:
-		Shrubbery(std::string name, int gradeToSign, int gradeToExecute);	
-		Shrubbery(Shrubbery const &src);	
-		Shrubbery& operator=(Shrubbery const &src);
-		~Shrubbery();	
+		RobotomyRequestForm(std::string name, int gradeToSign, int gradeToExecute);	
 
 		void	execute(Bureaucrat const &bc);
 
@@ -34,6 +29,9 @@ class Shrubbery : public AForm {
 					return ("Grade too low");
 				}
 		};
+
+
+	private:
 };
 
 #endif

@@ -6,21 +6,17 @@
 /*   By: motoko <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/26 15:25:51 by motoko            #+#    #+#             */
-/*   Updated: 2024/02/29 12:39:02 by motoko           ###   ########.fr       */
+/*   Updated: 2024/02/29 13:11:23 by motoko           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ShrubberyCreationForm.hpp"
 
-Shrubbery::Shrubbery() {
-	std::cout << "Shrubbery" << std::endl;
-}
-
 Shrubbery::Shrubbery(std::string name, int gradeToSign, int gradeToExecute) : AForm(name, gradeToSign, gradeToExecute) {
 	std::cout << "Shrubbery constructor with params called" << std::endl;
 }
 
-Shrubbery::Shrubbery(Shrubbery const &src) : AForm() {
+Shrubbery::Shrubbery(Shrubbery const &src) : AForm(src.getName(), src.getGradeToSign(), src.getGradeToExecute()) {
 	std::cout << "Shrubbery constructor by copy called" << std::endl;
 	*this = src; 
 }
@@ -63,5 +59,4 @@ void	Shrubbery::execute(Bureaucrat const &bc) {
 	}
 	else 
 		throw errMsg; 
-
 }

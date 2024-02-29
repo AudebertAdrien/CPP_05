@@ -6,13 +6,14 @@
 /*   By: motoko <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/20 14:50:53 by motoko            #+#    #+#             */
-/*   Updated: 2024/02/27 16:16:58 by motoko           ###   ########.fr       */
+/*   Updated: 2024/02/29 13:14:42 by motoko           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Bureaucrat.hpp"
 #include "AForm.hpp"
 #include "ShrubberyCreationForm.hpp"
+#include "RobotomyRequestForm.hpp"
 
 int	main(void) {
 
@@ -26,12 +27,16 @@ int	main(void) {
 		std::cout << b2 << std::endl;
 
 		AForm	*s1 = new Shrubbery("Shrubbery form", 145, 137);	
+		AForm	*s2 = new RobotomyRequestForm("RobotomyRequestForm form", 72, 45);	
 
 		b1.signForm(*s1);
 		b2.signForm(*s1);
 
 		b1.executeForm(s1);
 		b2.executeForm(s1);
+
+		b1.executeForm(s2);
+		b2.executeForm(s2);
 
 	} catch (const std::exception& error) {
 		std::cerr << RED << "Exception: " << error.what() << RESET << std::endl;

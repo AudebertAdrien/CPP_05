@@ -6,7 +6,7 @@
 /*   By: motoko <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/20 14:51:54 by motoko            #+#    #+#             */
-/*   Updated: 2024/02/29 12:43:57 by motoko           ###   ########.fr       */
+/*   Updated: 2024/02/29 13:08:30 by motoko           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,7 +28,6 @@ class Bureaucrate;
 
 class	AForm {
 	public:
-		AForm();	
 		AForm(std::string name, int gradeToSign, int gradeToExecute);	
 		AForm(AForm const &src);	
 		AForm& operator=(AForm const &src);
