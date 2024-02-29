@@ -6,7 +6,7 @@
 #    By: motoko <marvin@42.fr>                      +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/01/02 14:26:47 by motoko            #+#    #+#              #
-#    Updated: 2024/02/29 13:14:23 by motoko           ###   ########.fr        #
+#    Updated: 2024/02/29 14:03:30 by motoko           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -21,7 +21,8 @@ SRCS			:= main.cpp						\
 				   Bureaucrat.cpp				\
 				   AForm.cpp					\
 				   ShrubberyCreationForm.cpp	\
-				   RobotomyRequestForm.cpp
+				   RobotomyRequestForm.cpp		\
+				   PresidentialPardonForm.cpp
 
 CC				:= c++
 CFLAGS			:= -ggdb3 -Wall -Wextra 

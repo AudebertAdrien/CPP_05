@@ -6,7 +6,7 @@
 /*   By: motoko <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/29 13:00:06 by motoko            #+#    #+#             */
-/*   Updated: 2024/02/29 13:54:42 by motoko           ###   ########.fr       */
+/*   Updated: 2024/02/29 14:34:18 by motoko           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,21 @@
 
 RobotomyRequestForm::RobotomyRequestForm(std::string name, int gradeToSign, int gradeToExecute) : AForm(name, gradeToSign, gradeToExecute) {
 	std::cout << "RobotomyRequestForm constructor with params called" << std::endl;
+}
+
+RobotomyRequestForm::RobotomyRequestForm(RobotomyRequestForm const &src) : AForm(src.getName(), src.getGradeToSign(), src.getGradeToExecute()) {
+	std::cout << "RobotomyRequestForm constructor by copy called" << std::endl;
+	*this = src; 
+}
+
+RobotomyRequestForm&	RobotomyRequestForm::operator=(RobotomyRequestForm const &src) {
+	std::cout << "RobotomyRequestForm operator= constructor called" << std::endl;
+	if (this != &src) {}
+	return (*this);
+}
+
+RobotomyRequestForm::~RobotomyRequestForm() {
+	std::cout << "RobotomyRequestForm destructor called" << std::endl;
 }
 
 void	RobotomyRequestForm::execute(Bureaucrat const &bc) {
@@ -27,11 +42,10 @@ void	RobotomyRequestForm::execute(Bureaucrat const &bc) {
 
 		std::srand(time(NULL));
 		randNumber = std::rand() % 100 + 1;
-		//std::cout << "randNumber === " << randNumber << std::endl;
 		if (randNumber <= 50 )
-			std::cout << YELLOW << bc.getName() << " has been robotomized!" << RESET << std::endl;
+			std::cout << YELLOW << this->getName() << " has been robotomized!" << RESET << std::endl;
 		else
-			std::cout << MAGENTA << "Fail to robotomized!" << bc.getName() << RESET << std::endl;
+			std::cout << MAGENTA << "Fail to robotomized " << this->getName() << RESET << std::endl;
 	}
 	else 
 		throw errMsg; 

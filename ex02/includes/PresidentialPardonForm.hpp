@@ -1,29 +1,28 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   RobotomyRequestForm.hpp                            :+:      :+:    :+:   */
+/*   PresidentialPardonForm.hpp                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: motoko <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/02/29 12:59:41 by motoko            #+#    #+#             */
-/*   Updated: 2024/02/29 14:04:54 by motoko           ###   ########.fr       */
+/*   Created: 2024/02/29 13:56:32 by motoko            #+#    #+#             */
+/*   Updated: 2024/02/29 14:09:43 by motoko           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef ROBOTOMYREQUEST_HPP
-# define ROBOTOMYREQUEST_HPP
+#ifndef PRESIDENTIALPARDON_HPP
+# define PRESIDENTIALPARDON_HPP
 
 #include <iostream>
-#include <cstdlib>
 
 #include "AForm.hpp"
 
-class RobotomyRequestForm : public AForm {
+class PresidentialPardonForm : public AForm {
 	public:
-		RobotomyRequestForm(std::string name, int gradeToSign, int gradeToExecute);	
-		RobotomyRequestForm(RobotomyRequestForm const &src);	
-		RobotomyRequestForm& operator=(RobotomyRequestForm const &src);
-		~RobotomyRequestForm();	
+		PresidentialPardonForm(std::string name, int gradeToSign, int gradeToExecute);	
+		PresidentialPardonForm(PresidentialPardonForm const &src);	
+		PresidentialPardonForm& operator=(PresidentialPardonForm const &src);
+		~PresidentialPardonForm();	
 
 		void	execute(Bureaucrat const &bc);
 
@@ -33,9 +32,6 @@ class RobotomyRequestForm : public AForm {
 					return ("Grade too low");
 				}
 		};
-
-
-	private:
 };
 
 #endif
