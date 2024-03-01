@@ -6,7 +6,7 @@
 /*   By: motoko <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/29 15:18:12 by motoko            #+#    #+#             */
-/*   Updated: 2024/02/29 17:31:49 by motoko           ###   ########.fr       */
+/*   Updated: 2024/03/01 14:26:56 by motoko           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,11 +37,11 @@ Intern::~Intern() {
 
 int     find_index_form(std::string form_name)
  {
-     const char* levelString[] = {"Shrubbery", "RobotomyRequestForm", "PresidentialPardonForm"};
+	const char *forms[] = {"Shrubbery", "robotomy request", "presidential pardon"};
  
      for (int i = 0; i < 3; i++)
      {
-         if (levelString[i] == form_name)
+         if (forms[i] == form_name)
              return (i);
      }
      return (-1);
@@ -49,22 +49,23 @@ int     find_index_form(std::string form_name)
 
 AForm*	Intern::makeForm(std::string form_name, std::string target_name) {
 	std::cout << "Intern creates " << form_name << std::endl;	
-
-	const char *tab[] = {"Shrubbery", "RobotomyRequestForm", "PresidentialPardonForm"};
+	
+	AForm *form = NULL;
 	int	form_index = find_index_form(form_name);
+
 	switch (form_index) 
 	{
 		case 0:
-			AForm	*s1 = new Shrubbery("Home", 145, 137);	
-			return (s1);
+			form = new Shrubbery(target_name, 145, 137);	
+			break;
 		case 1:
-			AForm	*s2 = new RobotomyRequestForm("Dog", 72, 45);	
-			return (s2);
+			form = new RobotomyRequestForm(target_name, 72, 45);	
+			break;
 		case 2:
-			AForm	*s3 = new PresidentialPardonForm("Theo", 72, 45);	
-			return (s3);
+			form = new PresidentialPardonForm(target_name, 72, 45);	
+			break;
 		default:
 			std::cout << form_name << " doesn't exist !" << std::endl;
 	}
-	return (NULL);
+	return (form);
 }
