@@ -6,7 +6,7 @@
 /*   By: motoko <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/20 14:50:53 by motoko            #+#    #+#             */
-/*   Updated: 2024/02/26 14:35:06 by motoko           ###   ########.fr       */
+/*   Updated: 2024/03/04 14:55:55 by motoko           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,7 +34,10 @@ int	main(void) {
 		b2.signForm(f1);
 		std::cout << BLUE << "isSigned: " << f1.getIsSigned() << RESET << std::endl;
 
-		
+		//Bureaucrat	b3("B3", 152);
+		//std::cout << b3 << std::endl;
+		//Form		f2("Hiring form", 1, -1);	
+		//std::cout << f2 << std::endl;
 
 	} catch (const std::exception& error) {
 		std::cerr << RED << "Exception: " << error.what() << RESET << std::endl;

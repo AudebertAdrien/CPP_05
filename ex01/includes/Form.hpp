@@ -6,7 +6,7 @@
 /*   By: motoko <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/20 14:51:54 by motoko            #+#    #+#             */
-/*   Updated: 2024/02/26 14:36:16 by motoko           ###   ########.fr       */
+/*   Updated: 2024/03/04 14:52:11 by motoko           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -49,6 +49,14 @@ class	Form {
 					return ("<Form.hpp> Grade too low");
 				}
 		};
+
+		class GradeTooHighException : public std::exception {
+			public:
+				virtual const char* what() const throw() {
+					return ("<Form.hpp> Grade too High");
+				}
+		};
+
 
 	private:
 		std::string	_name;
