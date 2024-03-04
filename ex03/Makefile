@@ -6,7 +6,7 @@
 #    By: motoko <marvin@42.fr>                      +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/01/02 14:26:47 by motoko            #+#    #+#              #
-#    Updated: 2024/02/29 15:16:22 by motoko           ###   ########.fr        #
+#    Updated: 2024/03/04 14:25:49 by motoko           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -26,7 +26,7 @@ SRCS			:= main.cpp						\
 				   Intern.cpp
 
 CC				:= c++
-CFLAGS			:= -ggdb3 -Wall -Wextra 
+CFLAGS			:= -ggdb3 -Wall -Wextra -Werror
 
 ifdef STD
 CFLAGS			+= -std=$(STD)

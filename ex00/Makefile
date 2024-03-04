@@ -6,7 +6,7 @@
 #    By: motoko <marvin@42.fr>                      +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/01/02 14:26:47 by motoko            #+#    #+#              #
-#    Updated: 2024/02/21 13:09:05 by motoko           ###   ########.fr        #
+#    Updated: 2024/03/04 14:26:21 by motoko           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -21,7 +21,7 @@ SRCS			:= main.cpp				\
 				   Bureaucrat.cpp
 
 CC				:= c++
-CFLAGS			:= -ggdb3 -Wall -Wextra 
+CFLAGS			:= -ggdb3 -Wall -Wextra -Werror
 
 ifdef STD
 CFLAGS			+= -std=$(STD)
