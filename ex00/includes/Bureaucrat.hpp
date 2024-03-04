@@ -6,7 +6,7 @@
 /*   By: motoko <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/20 14:51:54 by motoko            #+#    #+#             */
-/*   Updated: 2024/02/20 18:24:41 by motoko           ###   ########.fr       */
+/*   Updated: 2024/03/04 14:38:10 by motoko           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,13 +36,13 @@ class	Bureaucrat {
 		class GradeTooHighException : public std::exception {
 			public:
 				virtual const char* what() const throw() {
-					return ("Too High");
+					return ("Grade too High (<1)");
 				}
 		};
 		class GradeTooLowException : public std::exception {
 			public:
 				virtual const char* what() const throw() {
-					return ("Too Low");
+					return ("Grade too Low (>150)");
 				}
 		};
 
