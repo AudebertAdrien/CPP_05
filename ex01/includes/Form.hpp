@@ -6,7 +6,7 @@
 /*   By: motoko <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/20 14:51:54 by motoko            #+#    #+#             */
-/*   Updated: 2024/03/04 14:52:11 by motoko           ###   ########.fr       */
+/*   Updated: 2024/03/04 15:05:44 by motoko           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,6 +25,7 @@ class Bureaucrate;
 #define BLUE	"\033[94m"
 #define YELLOW	"\033[93m"
 #define MAGENTA	"\033[95m"
+#define CYAN	"\033[96m"
 
 class	Form {
 	public:

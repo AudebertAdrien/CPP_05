@@ -6,7 +6,7 @@
 /*   By: motoko <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/20 14:51:33 by motoko            #+#    #+#             */
-/*   Updated: 2024/03/04 14:54:50 by motoko           ###   ########.fr       */
+/*   Updated: 2024/03/04 15:05:52 by motoko           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,12 +26,12 @@ Bureaucrat::Bureaucrat(std::string name, int grade) : _name(name), _grade(grade)
 }
 
 Bureaucrat::Bureaucrat(Bureaucrat const &src) {
-	std::cout << "Bureaucrat constructor by copy called" << std::endl;
+	std::cout << CYAN << "Bureaucrat constructor by copy called" << RESET << std::endl;
 	*this = src; 
 }
 
 Bureaucrat&	Bureaucrat::operator=(Bureaucrat const &src) {
-	std::cout << "Bureaucrat operator= constructor called" << std::endl;
+	std::cout << CYAN << "Bureaucrat operator= constructor called" << RESET << std::endl;
 	if (this != &src) {
 		this->_name = src._name;
 		this->_grade = src._grade;

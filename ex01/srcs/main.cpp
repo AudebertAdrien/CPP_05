@@ -6,7 +6,7 @@
 /*   By: motoko <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/20 14:50:53 by motoko            #+#    #+#             */
-/*   Updated: 2024/03/04 14:55:55 by motoko           ###   ########.fr       */
+/*   Updated: 2024/03/04 15:02:07 by motoko           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,12 +20,16 @@ int	main(void) {
 
 		Bureaucrat	b1("B1", 3);
 		Bureaucrat	b2("B2", 6);
+		Bureaucrat 	b3(b1);
 
 		std::cout << b1 << std::endl;
 		std::cout << b2 << std::endl;
+		std::cout << b3 << std::endl;
 
 		Form		f1("Hiring form", 5, 10);	
+		Form		f2 = f1;	
 		std::cout << f1 << std::endl;
+		std::cout << f2 << std::endl;
 
 		std::cout << BLUE << "isSigned: " << f1.getIsSigned() << RESET << std::endl;
 		b1.signForm(f1);
