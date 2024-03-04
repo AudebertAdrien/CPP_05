@@ -6,7 +6,7 @@
 /*   By: motoko <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/20 14:50:53 by motoko            #+#    #+#             */
-/*   Updated: 2024/02/29 16:45:12 by motoko           ###   ########.fr       */
+/*   Updated: 2024/03/04 14:23:37 by motoko           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,10 +23,13 @@ int	main(void) {
         std::cout << "------ Grade Form with Bureaucrat------" << std::endl << std::endl;
 
 		{
+			Bureaucrat	b1("B1", 3);
 			Intern someRandomIntern;
-			//AForm* rrf;
-			someRandomIntern.makeForm("robotomy request", "Bender");
-			//rrf = someRandomIntern.makeForm("robotomy request", "Bender");
+			AForm* rrf;
+
+			rrf = someRandomIntern.makeForm("robotomy request", "Bender");
+			b1.signForm(*rrf);
+			b1.executeForm(rrf);
 		}
 
 		std::cout << std::string(50, '#') << std::endl;
